@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,300&display=swap" rel="stylesheet"> <!--การเอา google font มาใช้งานในหน้าเว็บต้องอ้างอิงจากในหน้านี้ และ css-->
+    <link rel="stylesheet" href="flexslider/flexslider.css">  <!--ตัวปลั้กอินทำรูป slieshow-->
+    <link rel="stylesheet" href="magnific/dist/magnific-popup.css"> <!-- pop up-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+    <label>Spa Miji By Madame Priya</label>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features  <i class="fas fa-caret-down"></i></a> 
+            <ul>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">Java Script</a></li>
+                <li><a href="#">HTML</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Web Design  <i class="fas fa-caret-down"></i></a>
+            <ul>
+                <li><a href="#">Front End</a></li>
+                <li><a href="#">Back End</a></li>
+                <li><a href="#">Other <i class="fas fa-caret-right"></i></a>
+                    <ul>
+                        <li><a href="#">Developer</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+    </ul>
+    </nav>
+
+    <!-- Slide show Image -->
+    <div class="slideshow">
+
+        <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="img/spa-background.jpg" />
+              </li>
+              <li>
+                <img src="img/spa-wallpaper-1.jpg" />
+              </li>
+              <li>
+                <img src="img/spa-wallpaper-2.jpg" />
+              </li>
+              <li>
+                <img src="img/spa-wallpaper-1.jpg" />
+              </li>
+            </ul>
+          </div>
+            <a href="#"><i class="fas fa-chevron-down"></i></a>
+    </div>
+
+    <!--Image Gallery-->
+    <h1>Portfolio Project</h1>
+    <div class="gallery">
+        <div class="row">
+            <div class="col">
+                <a class="popup" href="img/gallery/suvarnabhumi-spa-1.jpg"><img src="img/gallery/suvarnabhumi-spa-1.jpg"></a>
+            </div>
+            <div class="col">
+                <a class="popup" href="img/gallery/suvarnabhumi-spa-3.jpg"><img src="img/gallery/suvarnabhumi-spa-3.jpg"></a>
+            </div>
+            <div class="col">
+                <a class="popup" href="img/gallery/suvarnabhumi-spa-4.jpg"><img src="img/gallery/suvarnabhumi-spa-4.jpg"></a>
+            </div>
+            <div class="col">
+                <a class="popup" href="img/gallery/suvarnabhumi-spa-5.jpg"><img src="img/gallery/suvarnabhumi-spa-5.jpg"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/aa5eec5cf1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="flexslider/jquery.flexslider.js"></script>  <!--อ้างอิงสคริป--> 
+    <script src="magnific/dist/jquery.magnific-popup.min.js"></script>  <!--pop up-->
+   <script>  // อ้างอิงสคริป
+        $(window).load(function() {
+         $('.flexslider').flexslider({
+         animation: "slide", //fade.side
+         slideshowSpeed: 1000,
+         direction: "vertical" //horizontal, vertical
+         });
+    
+    //popup
+        $('.popup').magnificPopup({
+            type: 'image',
+
+            //other options
+            gallery:{
+                enabled: true
+            },
+            zoom: {
+                enabled: true
+            },
+        });
+        });
+     </script>
+<!--Footer-->
+<footer>
+    <div>
+        &copy;SailorArmy
+    </div>
+</footer>
+</body>
+</html>

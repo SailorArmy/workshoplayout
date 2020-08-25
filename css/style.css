@@ -1,0 +1,153 @@
+*{
+    list-style-type: none; /* เอาจุดบูลเลท ออก  */
+    padding: 0;
+    margin: 0;
+    text-decoration: none; /*เอาเส้นใต้ออก*/
+}
+
+body{
+    font-family: 'Prompt', sans-serif; /* เอามาจาก Google font*/
+}
+
+nav{
+    height: 70px;
+    background-color: saddlebrown;
+}
+
+nav label{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 70px;
+    color: seashell;
+    line-height: 70px;
+
+}
+
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li{
+    display: inline-block; /* เป็นการกำหนดให้เป็นแนวนอน*/
+}
+
+nav ul li a{  /* เมนูชั้นแรก */
+    color: snow;
+    display: block;
+    padding: 0 15px;  /* 0 ตัวแรกคือ บน 15 คือเลขกำหนดซ้ายขวา*/
+    font-size: 20px;
+    background-color: saddlebrown;
+    line-height: 70px;
+}
+
+/* Hover เมนู*/
+nav ul li a:hover{
+    color: slateblue;
+}
+
+/* เมื่อมีการวางเมาส์บน li (เมนูหลัก) ให้ไปเรียกเมนูย่อยขึ้นมา */
+nav ul li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s ease;  /* การกำหนดหน่วงเวลาให้แสดงผลเหมือน ppt มาจากซ้ายไปขวา linear วิ่งแบบสมูทมาช้า*/ 
+
+}
+
+nav ul ul{  /* เมนูย่อยชั้นที่ 1 */
+    position: absolute;
+    top: 70px;
+    border-top: 3px solid salmon; 
+    /* display: none; กำหนดหายไปไม่สวย*/ 
+    opacity: 0;   /* กำหนดค่าความสว่างให้เมนูหายไป */
+    visibility: hidden; /* กำหนดให้ไม่สามารถเข้าถึงไม่ได้ นั่นก็คือซ่อนไว้ */
+    z-index: 2;  /* defaut มันคือ 1 ต้องกำหนดให้มากกว่า แล้วมันซ้อนทับกันได้หลายอัน ดูดีดีนะค้า*/
+}
+
+nav ul ul li{   /* เมนูย่อยชั้นที่ 1 */
+    width: 150px;
+    position: relative;
+    display: list-item;  /* เป็นการกำหนดให้เรียงจากบนลงล่าง*/
+}
+
+nav ul ul li a{
+    line-height: 50px;
+}
+
+/* เมนูย่อยชั้นที่ 2 */
+nav ul ul ul{
+    border-top: none;
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px; /* ความห่างของเมนู */
+}
+
+/* การจัดตำแหน่ง icon ให้อยู่ด้านขวาของกล่อง */
+nav ul ul li a i{
+    margin-left: 45px;
+}
+
+/*  เขียนตกแต่งส่วนของ slide show*/
+div.slideshow{
+    position: relative;
+    /* height: 88vh; /*  ความสูงเต็มหน้าจอ */
+    /* background-color: chocolate; */
+   /* background: url('../img/spa-background.jpg');  /*  ..คือเปนการถอยออกจากโฟลเดอ เพราะไฟล์นี้มันอยู่ อีกโฟลเดอร์นึง */
+    background-size: cover;
+    background-position: center;
+    /* overflow: hidden; /*ครอบเนื้อหาทั้งหมดไว้ ไม่ให้เนื้อหาอื่นๆ เข้ามาซ้อนทับ*/
+}
+
+div.slideshow i{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    font-size: 40px;
+    color: cornsilk;
+}
+
+/*แก้ไขขอบภาสไลด์*/
+.flexslider{
+    border: 0px;
+    
+}
+
+/* เขียนตกแต่งส่วนของ  Gallery*/
+h1{
+    font-size: 36px;
+    margin-left: 70px;
+    text-align: center;
+}
+
+div.gallery{
+    margin-top: 40px;
+    overflow: hidden; /*ครอบเนื้อหาทั้งหมดไว้ ไม่ให้เนื้อหาอื่นๆ เข้ามาซ้อนทับ*/
+}
+
+div.row{
+    overflow: hidden; /*ครอบเนื้อหาทั้งหมดไว้ ไม่ให้เนื้อหาอื่นๆ เข้ามาซ้อนทับ*/
+    padding-left: 70px;
+    padding-right: 70px;
+    
+}
+
+div.col{
+    float: left;
+    width: 23%;
+    margin: 10px;
+}
+
+div.col img{
+    width: 100%;
+}
+
+footer{
+    background: brown;
+    color: ivory;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
